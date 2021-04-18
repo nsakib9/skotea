@@ -1,0 +1,7 @@
+[Unit]
+Description=Run Laravel scheduled tasks
+After=network.target
+
+[Service]
+User=webapp
+ExecStart=/usr/bin/php /var/app/current/artisan schedule:run

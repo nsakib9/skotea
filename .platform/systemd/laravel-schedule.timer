@@ -1,0 +1,9 @@
+[Unit]
+Description=Run laravel scheduled tasks
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1m
+
+[Install]
+WantedBy=timers.target
