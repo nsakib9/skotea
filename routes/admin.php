@@ -26,6 +26,16 @@ Route::group(['prefix' => (LOGIN_USER_TYPE=='company')?'company':'admin', 'middl
 		Route::get('logout', 'AdminController@logout');
 	}
 
+	// Front pages routes
+
+	// Manage Banner
+	Route::get('banner', 'BannerController@index')->middleware('admin_can:view_rider');
+	Route::match(array('GET', 'POST'), 'add_banner', 'BannerController@add')->middleware('admin_can:create_rider');
+	Route::match(array('GET', 'POST'), 'edit_banner/{id}', 'BannerController@update')->middleware('admin_can:update_rider');
+	Route::match(array('GET', 'POST'), 'delete_banner/{id}', 'BannerController@delete')->middleware('admin_can:delete_rider');
+
+	//Front pages routes end
+
 	// Admin Users and permission routes
 	Route::group(['middleware' => 'admin_can:manage_admin'], function() {
         Route::get('admin_user', 'AdminController@view');

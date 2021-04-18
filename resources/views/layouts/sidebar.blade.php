@@ -40,9 +40,9 @@
                         @if($company_user || @$user->can('view_driver'))
                         <li class="{{ (Route::current()->uri() == $first_segment.'/driver') ? 'active' : ''  }}"><a href="{{ url($first_segment.'/driver') }}">Drivers</a></li>
                         @endif
-                        <li class="{{ (Route::current()->uri() == 'admin/partner') ? 'active' : ''  }}"><a href="#">Partners</a></li>
-                        <li class="{{ (Route::current()->uri() == 'admin/staff') ? 'active' : ''  }}"><a href="#">Staff</a></li>
-                        <li class="{{ (Route::current()->uri() == 'admin/user') ? 'active' : ''  }}"><a href="#">Admin</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Staff</a></li>
+                        <li><a href="#">Admin</a></li>
                     </ul>
                 </li>
 
@@ -122,6 +122,23 @@
                 </li>
 
                 <li class="menu-title" key="t-apps">@lang('translation.Apps')</li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bxs-eject"></i>
+                        <span key="t-ecommerce">Front Settings</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+
+                        <li><a href="javascript: void(0);" class="has-arrow waves-effect">
+                            <span key="t-ecommerce">Pages</span>
+                        </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="{{ url('admin/banner') }}" key="t-products">Banner</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
 
                 <li>
                     <a href="calendar" class="waves-effect">

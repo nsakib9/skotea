@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\Models\Pages;
+use DB;
+use App;
+use Auth;
+use Route;
+use Session;
 use App\Models\Help;
+use App\Models\Pages;
+use App\Models\Banner;
+use App\Models\JoinUs;
+use App\Models\Currency;
+use Illuminate\Http\Request;
 use App\Models\HelpSubCategory;
 use App\Models\HelpTranslations;
-use App\Models\Currency;
-use App\Models\JoinUs;
-use Auth;
-use App;
-use Route;
-use DB;
-use Session;
+use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
@@ -28,7 +29,8 @@ class HomeController extends Controller
     
 	public function newindex()
     {
-    	return view('home.index');
+        $banner = Banner::first();
+    	return view('home.index', compact('banner'));
     }
 
 	public function pricing()

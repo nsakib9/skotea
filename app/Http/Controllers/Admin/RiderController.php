@@ -13,22 +13,23 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\DataTables\RiderDataTable;
+use DB;
+use Validator;
 use App\Models\User;
 use App\Models\Trips;
+use App\Models\Banner;
 use App\Models\Wallet;
-use App\Models\UsersPromoCode;
 use App\Models\Country;
-use App\Models\ProfilePicture;
+use App\Http\Start\Helpers;
+use App\Models\ReferralUser;
+use Illuminate\Http\Request;
 use App\Models\PaymentMethod;
 use App\Models\RiderLocation;
 use App\Models\ApiCredentials;
-use App\Models\ReferralUser;
-use App\Http\Start\Helpers;
-use Validator;
-use DB;
+use App\Models\ProfilePicture;
+use App\Models\UsersPromoCode;
+use App\DataTables\RiderDataTable;
+use App\Http\Controllers\Controller;
 
 class RiderController extends Controller
 {
