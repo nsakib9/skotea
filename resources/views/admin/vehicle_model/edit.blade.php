@@ -1,5 +1,9 @@
-@extends('admin.template')
-@section('main')
+@extends('layouts.master')
+@section('css')
+@endsection
+
+
+@section('content')
 <div class="content-wrapper" ng-controller="driver_management">
   <section class="content-header">
     <h1> Edit Vehicle Model </h1>

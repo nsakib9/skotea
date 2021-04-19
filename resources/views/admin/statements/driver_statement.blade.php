@@ -1,5 +1,8 @@
-@extends('admin.template')
-@section('main')
+@extends('layouts.master')
+@section('css')
+@endsection
+
+@section('content')
 <div class="content-wrapper" ng-controller="statements">
 	<section class="content @{{ isLoading ? 'loading' : ''}}" ng-cloak>
 		<div class="row">

@@ -1,5 +1,10 @@
-@extends('admin.template')
-@section('main')
+
+
+@extends('layouts.master')
+@section('css')
+@endsection
+
+@section('content')
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
@@ -35,7 +40,9 @@
     </div>
   </section>
 </div>
+
 @endsection 
+
 @push('scripts')
   <link rel="stylesheet" href="{{ url('css/buttons.dataTables.css') }}">
   <script src="{{ url('js/dataTables.buttons.js') }}"></script>

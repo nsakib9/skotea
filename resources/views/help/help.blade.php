@@ -1,6 +1,8 @@
 <title> Help | {{$site_name}}</title>
-@extends('templatesign')
+@extends('layouts.master')
+@section('css')
+@endsection
 
-@section('main')
+@section('content')
 </main>
 @stop

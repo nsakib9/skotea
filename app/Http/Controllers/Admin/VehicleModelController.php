@@ -33,6 +33,7 @@ class VehicleModelController extends Controller
     {
        if(!$_POST)
         {
+            
             $data['make']=MakeVehicle::Active()->pluck('make_vehicle_name','id')->toArray();
             return view('admin.vehicle_model.add',$data);  
         }

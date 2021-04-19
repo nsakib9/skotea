@@ -1,5 +1,8 @@
-@extends('admin.template')
-@section('main')
+@extends('layouts.master')
+@section('css')
+@endsection
+
+@section('content')
 <div class="fees-wrap content-wrapper">
 	<section class="content-header">
 		<h1>

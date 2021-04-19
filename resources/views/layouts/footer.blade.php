@@ -1,3 +1,4 @@
+
 <footer class="footer">
     <div class="container-fluid">
         <div class="row">
@@ -12,3 +13,7 @@
         </div>
     </div>
 </footer>
+
+{{-- new file from template  --}}
+@include('admin.common.footer')
+@include('admin.common.foot')

@@ -1,14 +1,23 @@
-@extends('admin.template')
-@section('main')
+{{-- @extends('admin.template') --}}
+
+@extends('layouts.master')
+
+@section('css')
+   
+@endsection
+
+
+@section('content')
+
 <div class="content-wrapper" ng-controller="driver_management">
   <section class="content-header">
-    <h1> Add Vehicle Make </h1>
-    <ol class="breadcrumb">
-      <li><a href="{{ url(LOGIN_USER_TYPE.'/dashboard') }}"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li><a href="{{ url(LOGIN_USER_TYPE.'/vehicle_make') }}">Vehicle Make</a></li>
+		<h1 style="display: inline-block; ">  Add Vehicle Make </h1>
+		<ol style=" float: right;" class="breadcrumb">
+      <li><a href="{{ url(LOGIN_USER_TYPE.'/dashboard') }}"><i class="fa fa-dashboard"></i> Home</a></li> 
+      <li><a href="{{ url(LOGIN_USER_TYPE.'/vehicle_make') }}">Vehicle Make</a></li> 
       <li class="active">Add</li>
-    </ol>
-  </section>
+		</ol>
+	</section>
   <section class="content">
     <div class="row">
       <div class="col-md-8 col-sm-offset-2 ne_ed">
@@ -44,4 +53,10 @@
     </div>
   </section>
 </div>
+
 @endsection
+
+
+{{-- @section('main')
+
+@endsection --}}
